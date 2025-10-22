@@ -55,7 +55,7 @@ Når man kører **SupportCosmos.Server**, kører klienten automatisk med.
 
 ## 🧩 Arkitektur og dataflow
 
-```mermaid
+```
 graph TD
     A[Bruger udfylder formular i Blazor (CreateSupport)] --> B[POST /api/support]
     B --> C[SupportController.cs]
