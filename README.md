@@ -2,7 +2,7 @@
 **Udarbejdet af:** Mohammad Haj  
 **Uddannelse:** IT-arkitektur – Erhvervsakademi Aarhus  
 **Fag:** Cloud Computing (Modul 4)  
-**Afleveringsdato:** Oktober 2025
+**Afleveringsdato:** 22 Oktober 2025
 
 ---
 
