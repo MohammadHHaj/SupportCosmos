@@ -31,17 +31,6 @@ Når man kører **SupportCosmos.Server**, kører klienten automatisk med.
 
 ---
 
-## ⚙️ Teknologier
-- **.NET 9.0**
-- **Blazor WebAssembly (Hosted)**
-- **ASP.NET Core Web API**
-- **Azure CosmosDB (NoSQL)**
-- **C# / Razor / CSS**
-- **Dependency Injection**
-- **JSON Serialization**
-
----
-
 ## 💡 Funktionalitet
 - Formular til oprettelse af supporthenvendelse (`CreateSupport.razor`)
 - Validering med **DataAnnotations** (navn, email, telefon, kategori, beskrivelse)
@@ -51,19 +40,7 @@ Når man kører **SupportCosmos.Server**, kører klienten automatisk med.
 - **Modal-dialog** der vises ved succesfuld indsendelse
 - **Responsivt og moderne design** med animationer og grønt farvetema
 
----
 
-## 🧩 Arkitektur og dataflow
-
-```
-graph TD
-    A[Bruger udfylder formular i Blazor (CreateSupport)] --> B[POST /api/support]
-    B --> C[SupportController.cs]
-    C --> D[CosmosService.AddItemAsync()]
-    D --> E[Azure CosmosDB Container]
-    E --> F[Gemmer data som JSON-dokument]
-    F --> G[SupportList.razor henter data via GET /api/support]
-```
 ---
 ## ☁️ Oprettelse af ny CosmosDB-database via Azure CLI
 
