@@ -79,3 +79,4 @@ C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Server\obj\Debug\net9.0\refint
 C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Server\obj\Debug\net9.0\SupportCosmos.Server.pdb
 C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Server\obj\Debug\net9.0\SupportCosmos.Server.genruntimeconfig.cache
 C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Server\obj\Debug\net9.0\ref\SupportCosmos.Server.dll
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Server\obj\Debug\net9.0\SupportCosmos.Server.sourcelink.json

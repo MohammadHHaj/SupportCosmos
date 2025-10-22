@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SupportCosmos.Client",
   "resources": {
-    "hash": "sha256-NoaXWhrnKrTwT5Zr8UQx3PhkyWYi4pAc/Z1rZVlG07k=",
+    "hash": "sha256-twKq96nohRL2Z8gOjBWoGvHyfll3lbbXKMm+4vXAHrU=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.qe23mgxr71.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.flveird317.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -202,10 +202,10 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "SupportCosmos.Shared.8obzhmyc2s.wasm": "SupportCosmos.Shared.wasm",
-      "SupportCosmos.Shared.od4vjvzu0x.pdb": "SupportCosmos.Shared.pdb",
-      "SupportCosmos.Client.dhckxmpn5w.wasm": "SupportCosmos.Client.wasm",
-      "SupportCosmos.Client.evi7orcmas.pdb": "SupportCosmos.Client.pdb"
+      "SupportCosmos.Shared.jaj1v5ltta.wasm": "SupportCosmos.Shared.wasm",
+      "SupportCosmos.Shared.3o9lzk8zl1.pdb": "SupportCosmos.Shared.pdb",
+      "SupportCosmos.Client.tfmhnvdk4g.wasm": "SupportCosmos.Client.wasm",
+      "SupportCosmos.Client.yjbgaoyz61.pdb": "SupportCosmos.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.9ih887ebfz.js": "sha256-oS7IRiQoVt9ThQ7Y2UM3XoeY0JqPD02cg9IvRdufn2w="
@@ -416,12 +416,12 @@
       "WindowsBase.vy2l5u79y6.wasm": "sha256-ufB9Mo5joMyUs3DzXWWBFFIZNEVrt6h9N5stYB6Oln4=",
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
-      "SupportCosmos.Shared.8obzhmyc2s.wasm": "sha256-KPGLkTCe9Ciumo3cUREVnwye+CVdJPCw7d7r9jdTY1I=",
-      "SupportCosmos.Client.dhckxmpn5w.wasm": "sha256-MaXb78eU8LIivufhp4icbvbRcOKkW6iJbi0elPzZS3w="
+      "SupportCosmos.Shared.jaj1v5ltta.wasm": "sha256-FaXw6K1VB6ipvDoE+0q86XA4HwL5MqdKQUKyIAEQGSE=",
+      "SupportCosmos.Client.tfmhnvdk4g.wasm": "sha256-J1Fnuy3/LbmmKais9SBe87uveg0USISoRF9nXluWzQ0="
     },
     "pdb": {
-      "SupportCosmos.Shared.od4vjvzu0x.pdb": "sha256-7KbV0RAf3ug3Rfe9escAo8iTrc1mLTSczqR0At7wArI=",
-      "SupportCosmos.Client.evi7orcmas.pdb": "sha256-Sv+Te3czg6lAl8NbweVDTAdoBy9iJ6RFN34aHnzD/fw="
+      "SupportCosmos.Shared.3o9lzk8zl1.pdb": "sha256-Mzcp0ajL04lHNUJP46D0H4p50kc/L1fXSw9fF5hw5W4=",
+      "SupportCosmos.Client.yjbgaoyz61.pdb": "sha256-figIi7qM50AhurTJzAkfPYGfqLvfTVC4fQu3ZgH51RA="
     }
   },
   "cacheBootResources": true,

@@ -10,3 +10,4 @@ C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\Suppor
 C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\refint\SupportCosmos.Shared.dll
 C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\SupportCosmos.Shared.pdb
 C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\ref\SupportCosmos.Shared.dll
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\SupportCosmos.Shared.sourcelink.json
