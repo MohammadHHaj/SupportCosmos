@@ -1,0 +1,134 @@
+/* --- Baggrund (overlay) --- */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    z-index: 1050;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* --- Boksen --- */
+.modal-dialog {
+    max-width: 460px;
+    width: 92%;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: scale(0.96) translateY(15px);
+    opacity: 0;
+    animation: modalPop 0.35s ease forwards;
+    overflow: hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* --- Indhold --- */
+.modal-content {
+    background: #fff;
+    border: none;
+    padding: 24px;
+    color: #222;
+}
+
+/* --- Header --- */
+.modal-header {
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.modal-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    letter-spacing: 0.3px;
+}
+
+
+
+/* --- Body --- */
+.modal-body {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #444;
+    padding-top: 10px;
+}
+
+/* --- Luk-knap --- */
+.button-luk {
+    display: inline-block;
+    padding: 10px 26px;
+    background: linear-gradient(145deg, #b32121, #b32121);
+    border: 1px solid #b32121;
+    color: #b32121;
+    border-radius: 50px; /* gør den rundere og elegant */
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+    margin-top: 10px;
+    user-select: none;
+}
+
+.button-luk:hover {
+    background: linear-gradient(145deg, #f7f7f7, #e9e9e9);
+    border-color: #b32121;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.button-luk:active {
+    background: linear-gradient(145deg, #b32121, #b32121);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    transform: scale(0.98);
+}
+
+/* For nem indlæsning i mørkt tema */
+@media (prefers-color-scheme: dark) {
+    .button-luk {
+        background: linear-gradient(145deg, #b32121, #b32121);
+        border: 1px solid #b32121;
+        color: #b32121;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+    }
+
+    .button-luk:hover {
+        background: linear-gradient(145deg, #b32121, #b32121);
+        border-color: #555;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.6);
+    }
+
+    .button-luk:active {
+        background: linear-gradient(145deg, #b32121, #b32121);
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);
+    }
+}
+.modal-backdrop{
+    z-index: 1049;
+}
+
+/* --- Animation --- */
+@keyframes modalPop {
+    0% {
+        transform: scale(0.96) translateY(15px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}

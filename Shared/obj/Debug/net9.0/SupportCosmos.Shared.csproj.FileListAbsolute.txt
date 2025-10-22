@@ -1,0 +1,12 @@
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\bin\Debug\net9.0\SupportCosmos.Shared.deps.json
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\bin\Debug\net9.0\SupportCosmos.Shared.dll
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\bin\Debug\net9.0\SupportCosmos.Shared.pdb
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\SupportCosmos.Shared.csproj.AssemblyReference.cache
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\SupportCosmos.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\SupportCosmos.Shared.AssemblyInfoInputs.cache
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\SupportCosmos.Shared.AssemblyInfo.cs
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\SupportCosmos.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\SupportCosmos.Shared.dll
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\refint\SupportCosmos.Shared.dll
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\SupportCosmos.Shared.pdb
+C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Shared\obj\Debug\net9.0\ref\SupportCosmos.Shared.dll

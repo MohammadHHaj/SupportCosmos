@@ -1,0 +1,67 @@
+﻿@page "/"
+@inject NavigationManager Nav
+
+<div class="home-wrapper">
+    <div class="home-card">
+        <h1 class="home-title">Velkommen til <span>SupportCosmos 🌿</span></h1>
+        <p class="home-subtitle">
+            SupportCosmos gør det nemt at håndtere henvendelser, tekniske spørgsmål og produktfeedback samlet ét sted.  
+            Vores mål er at give dig et hurtigt overblik og en professionel supportoplevelse – både for brugere og administratorer.
+        </p>
+
+        <div class="home-buttons">
+            <button class="home-btn primary" @onclick="OnClickCreate">
+                <i class="bi bi-plus-circle"></i> Opret henvendelse
+            </button>
+            <button class="home-btn secondary" @onclick="OnClickList">
+                <i class="bi bi-list-ul"></i> Se henvendelser
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- --- Info sektion --- -->
+<section class="info-section">
+    <div class="info-grid">
+        <div class="info-box">
+            <i class="bi bi-lightbulb"></i>
+            <h3>Hurtig support</h3>
+            <p>Opret din henvendelse på få sekunder – vi sørger for, at den hurtigt bliver behandlet af den rette person.</p>
+        </div>
+
+        <div class="info-box">
+            <i class="bi bi-gear"></i>
+            <h3>Effektiv behandling</h3>
+            <p>Alle sager håndteres struktureret i systemet, så du kan følge status og modtage svar direkte online.</p>
+        </div>
+
+        <div class="info-box">
+            <i class="bi bi-people"></i>
+            <h3>Samarbejde & overblik</h3>
+            <p>Hele teamet får overblik over aktuelle henvendelser og kan kommunikere direkte med brugeren.</p>
+        </div>
+    </div>
+</section>
+
+<!-- --- CTA sektion --- -->
+<section class="cta-section">
+    <div class="cta-box">
+        <h2>Brug for hjælp allerede nu?</h2>
+        <p>Tryk på knappen herunder for at komme i kontakt med vores supportteam – vi står klar til at hjælpe dig.</p>
+        <button class="cta-btn" @onclick="OnClickCreate">
+            <i class="bi bi-chat-left-text"></i> Start ny supporthenvendelse
+        </button>
+    </div>
+</section>
+
+@code {
+    private void OnClickCreate()
+    {
+        Nav.NavigateTo("/create-support");
+    }
+
+    private void OnClickList()
+    {
+        Nav.NavigateTo("/support-list");
+    }
+}

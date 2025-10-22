@@ -1,0 +1,268 @@
+/* --- Layout wrapper --- */
+.home-wrapper[b-4uwmffyuza] {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 70vh; /* mindre højde så den kommer tættere på toppen */
+    padding-top: 60px; /* 💡 før var 100px — nu tættere på navbar */
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f7f5 100%);
+    font-family: 'Inter', system-ui, sans-serif;
+    animation: fadeIn-b-4uwmffyuza 0.5s ease-out;
+}
+/* --- Hero-kort --- */
+.home-card[b-4uwmffyuza] {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 50px 60px; /* lidt kompakteret */
+    max-width: 650px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.07);
+    animation: popUp-b-4uwmffyuza 0.6s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px; /* mindre afstand ned til næste sektion */
+}
+
+.home-card:hover[b-4uwmffyuza] {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Titel og tekst --- */
+.home-title[b-4uwmffyuza] {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 16px;
+}
+
+.home-title span[b-4uwmffyuza] {
+    color: #59c9a5;
+}
+
+.home-subtitle[b-4uwmffyuza] {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* --- Knapper --- */
+.home-buttons[b-4uwmffyuza] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.home-btn[b-4uwmffyuza] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Primær (grøn) --- */
+.home-btn.primary[b-4uwmffyuza] {
+    background: linear-gradient(145deg, #a8e6cf, #96d6bf);
+    color: #1e1e1e;
+}
+
+.home-btn.primary:hover[b-4uwmffyuza] {
+    background: linear-gradient(145deg, #b9ebd7, #9ddcc6);
+    transform: translateY(-2px);
+}
+
+/* --- Sekundær --- */
+.home-btn.secondary[b-4uwmffyuza] {
+    background: #f8f8f8;
+    color: #333;
+    border: 1px solid #dcdcdc;
+}
+
+.home-btn.secondary:hover[b-4uwmffyuza] {
+    background: #eef7f3;
+    transform: translateY(-2px);
+}
+
+/* --- Info-sektion (rykket op og fylder hele bredden) --- */
+/* --- Info-sektion (løftet helt op under hero) --- */
+.info-section[b-4uwmffyuza] {
+    padding: 20px 5% 40px; /* lidt mindre top/bund */
+    margin-top: -210px; /* før var -200 — nu naturligt tættere */
+    background: linear-gradient(180deg, #ffffff 0%, #f8fdfb 100%);
+    text-align: center;
+}
+
+
+/* --- Wave-overgang (mellem info og CTA) --- */
+.info-section[b-4uwmffyuza]::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23a8e6cf' fill-opacity='1' d='M0,256L48,224C96,192,192,128,288,122.7C384,117,480,171,576,202.7C672,235,768,245,864,234.7C960,224,1056,192,1152,165.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    z-index: 1;
+}
+
+/* --- Info grid layout --- */
+.info-grid[b-4uwmffyuza] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+/* --- Info-bokse --- */
+.info-box[b-4uwmffyuza] {
+    background: #f8fdfb;
+    border-radius: 14px;
+    padding: 30px 18px; /* mindre padding */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+.info-box:hover[b-4uwmffyuza] {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.info-box i[b-4uwmffyuza] {
+    font-size: 1.8rem; /* mindre ikon */
+    color: #59c9a5;
+    margin-bottom: 8px;
+}
+
+.info-box h3[b-4uwmffyuza] {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+    color: #222;
+}
+
+.info-box p[b-4uwmffyuza] {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* --- Responsivt --- */
+@media (max-width: 1000px) {
+    .info-grid[b-4uwmffyuza] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .info-grid[b-4uwmffyuza] {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- CTA sektion (kompakt og elegant) --- */
+.cta-section[b-4uwmffyuza] {
+    background: linear-gradient(135deg, #a8e6cf, #96d6bf);
+    text-align: center;
+    padding: 35px 20px 45px;
+    color: #1e1e1e;
+    border-top: 1px solid #d0f0e2;
+    margin-top: -20px; /* 💡 løfter grøn sektion tættere på bokse */
+    position: relative;
+}
+
+/* Giv en let skygge for at adskille sektionen fra ovenstående */
+.cta-section[b-4uwmffyuza]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
+}
+
+/* --- CTA indhold --- */
+.cta-box[b-4uwmffyuza] {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.cta-box h2[b-4uwmffyuza] {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+}
+
+.cta-box p[b-4uwmffyuza] {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.cta-btn[b-4uwmffyuza] {
+    background: #fff;
+    color: #1e1e1e;
+    padding: 10px 28px; /* mindre knap */
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn:hover[b-4uwmffyuza] {
+    background: #f5fffa;
+    transform: translateY(-2px);
+}
+
+
+/* --- Fjern unødvendigt mellemrum mellem sektionerne --- */
+.info-section[b-4uwmffyuza] {
+    margin-bottom: 0; /* så CTA’en rykker helt op under bokse */
+}
+
+
+/* --- Animationer --- */
+@keyframes fadeIn-b-4uwmffyuza {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popUp-b-4uwmffyuza {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* --- Responsivt --- */
+@media (max-width: 700px) {
+    .home-card[b-4uwmffyuza] {
+        padding: 40px 30px;
+    }
+    .home-title[b-4uwmffyuza] {
+        font-size: 1.6rem;
+    }
+    .info-section[b-4uwmffyuza] {
+        padding: 60px 5%;
+    }
+}

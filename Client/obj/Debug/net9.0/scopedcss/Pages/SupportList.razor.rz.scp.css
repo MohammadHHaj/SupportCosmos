@@ -1,0 +1,138 @@
+/* --- Wrapper --- */
+.support-list-wrapper[b-zpshthyff6] {
+    max-width: 1150px; /* bredere end før */
+    margin: 1rem auto 3rem auto; /* rykket lidt op */
+    padding: 2.2rem 2.5rem;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+}
+
+/* --- Titel --- */
+.support-list-wrapper h3[b-zpshthyff6] {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 2.2rem;
+    letter-spacing: 0.3px;
+}
+
+/* --- Loading / tom tekst --- */
+.support-list-wrapper p[b-zpshthyff6] {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* --- Tabel-styling --- */
+.support-table[b-zpshthyff6] {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.support-table thead[b-zpshthyff6] {
+    background: linear-gradient(135deg, #a8e6cf, #9cd9c3);
+    color: #1e1e1e;
+    font-weight: 600;
+}
+
+.support-table th[b-zpshthyff6] {
+    padding: 16px 14px;
+    text-align: left;
+    font-size: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.support-table td[b-zpshthyff6] {
+    padding: 13px 15px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    transition: background 0.2s ease;
+    line-height: 1.5;
+}
+
+/* --- Hover-rækker --- */
+.support-table tbody tr:hover[b-zpshthyff6] {
+    background: rgba(168, 230, 207, 0.1);
+}
+
+/* --- Ingen data --- */
+.support-list-wrapper em[b-zpshthyff6] {
+    color: #888;
+}
+
+/* --- Responsiv --- */
+@media (max-width: 900px) {
+    .support-list-wrapper[b-zpshthyff6] {
+        padding: 1.5rem;
+        margin: 6rem 1rem 2rem 1rem;
+        max-width: 95%;
+    }
+
+    .support-table th[b-zpshthyff6], .support-table td[b-zpshthyff6] {
+        padding: 10px;
+        font-size: 0.88rem;
+    }
+
+    .support-list-wrapper h3[b-zpshthyff6] {
+        font-size: 1.4rem;
+    }
+}
+
+/* --- Knapper nederst --- */
+.form-buttons[b-zpshthyff6] {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* --- Wrapper der indeholder alt --- */
+.page-wrapper[b-zpshthyff6] {
+    position: relative;
+    padding-top: 40px;
+}
+
+/* --- Tilbage-knap placeret udenfor boksen --- */
+.back-btn.outside[b-zpshthyff6] {
+    position: absolute;
+    top: -28px;
+    background: linear-gradient(145deg, #a8e6cf, #96d6bf);
+    color: #1e1e1e;
+    border: none;
+    padding: 10px 26px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-btn.outside:hover[b-zpshthyff6] {
+    background: linear-gradient(145deg, #b9ebd7, #9ddcc6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn.outside i[b-zpshthyff6] {
+    font-size: 1.1rem;
+}
+
+/* --- Justér placering på mobil --- */
+@media (max-width: 600px) {
+    .back-btn.outside[b-zpshthyff6] {
+        left: 20px;
+        top: 10px;
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}

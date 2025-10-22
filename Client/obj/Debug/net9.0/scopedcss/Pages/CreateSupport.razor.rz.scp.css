@@ -1,0 +1,249 @@
+/* --- Wrapper --- */
+.support-wrapper[b-rymb5hb2o2] {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f7f5 100%);
+    padding: 80px 20px 40px 20px;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* --- Kortet --- */
+.support-card[b-rymb5hb2o2] {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 45px 55px;
+    max-width: 540px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn-b-rymb5hb2o2 0.4s ease;
+}
+
+.support-card:hover[b-rymb5hb2o2] {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Titel --- */
+.support-title[b-rymb5hb2o2] {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #1e1e1e;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- Formular layout --- */
+.support-form[b-rymb5hb2o2] {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* --- Floating label felt --- */
+.floating-field[b-rymb5hb2o2] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px; /* ✅ lille luft mellem felter */
+}
+
+.floating-field .input[b-rymb5hb2o2] {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #dcdcdc;
+    background: #fafafa;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+}
+
+.floating-field label[b-rymb5hb2o2] {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #777;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+/* --- Flyt label ved fokus eller indtastning --- */
+.floating-field .input:focus + label[b-rymb5hb2o2],
+.floating-field .input:not(:placeholder-shown) + label[b-rymb5hb2o2] {
+    top: 0;
+    left: 12px;
+    font-size: 0.8rem;
+    padding: 0 4px;
+    background: #fff;
+    color: #5b9f8b;
+}
+
+/* --- Fokus effekt --- */
+.floating-field .input:focus[b-rymb5hb2o2] {
+    outline: none;
+    border-color: #a8e6cf;
+    box-shadow: 0 0 0 3px rgba(168, 230, 207, 0.3);
+    background: #ffffff;
+}
+
+/* --- Tekstområde (beskrivelse) --- */
+.textarea[b-rymb5hb2o2] {
+    resize: none;
+    min-height: 110px;
+    padding-top: 18px; /* ✅ ekstra luft til label */
+}
+
+/* --- Justér label for textarea --- */
+.floating-field textarea + label[b-rymb5hb2o2] {
+    top: 18px;
+}
+
+.floating-field textarea:focus + label[b-rymb5hb2o2],
+.floating-field textarea:not(:placeholder-shown) + label[b-rymb5hb2o2] {
+    top: 0;
+    font-size: 0.8rem;
+    background: #fff;
+    color: #5b9f8b;
+    padding: 0 4px;
+}
+
+/* --- Send-knap --- */
+.send-btn[b-rymb5hb2o2] {
+    align-self: center;
+    padding: 12px 34px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e1e1e;
+    background: linear-gradient(145deg, #a8e6cf, #96d6bf);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    margin-top: 12px;
+}
+
+.send-btn:hover[b-rymb5hb2o2] {
+    background: linear-gradient(145deg, #b9ebd7, #9ddcc6);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(100, 200, 170, 0.25);
+}
+
+.send-btn:active[b-rymb5hb2o2] {
+    transform: scale(0.98);
+    background: linear-gradient(145deg, #9fdcc6, #8dcdb7);
+}
+
+/* --- Modal-knap (luk) --- */
+.button-luk[b-rymb5hb2o2] {
+    display: inline-block;
+    padding: 10px 28px;
+    background: linear-gradient(145deg, #a8e6cf, #9cd9c3);
+    border: 1px solid #94d1bb;
+    color: #1e1e1e;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease;
+    margin-top: 10px;
+    user-select: none;
+}
+
+.button-luk:hover[b-rymb5hb2o2] {
+    background: linear-gradient(145deg, #b7ead7, #a0e0c8);
+    box-shadow: 0 6px 16px rgba(100, 200, 170, 0.3);
+    transform: translateY(-2px);
+}
+
+/* --- Animation --- */
+@keyframes fadeIn-b-rymb5hb2o2 {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsivt design --- */
+@media (max-width: 600px) {
+    .support-card[b-rymb5hb2o2] {
+        padding: 30px 25px;
+    }
+}
+
+
+/* --- Juster label for select --- */
+.floating-field select.input + label[b-rymb5hb2o2] {
+    top: 14px;
+}
+
+.floating-field select.input:focus + label[b-rymb5hb2o2],
+.floating-field select.input:not(:placeholder-shown) + label[b-rymb5hb2o2] {
+    top: -6px;
+    font-size: 0.8rem;
+    background: #fff;
+    color: #5b9f8b;
+    padding: 0 4px;
+}
+/* --- Knapper nederst --- */
+.form-buttons[b-rymb5hb2o2] {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* --- Wrapper der indeholder alt --- */
+.page-wrapper[b-rymb5hb2o2] {
+    position: relative;
+    padding-top: 40px;
+}
+
+/* --- Tilbage-knap placeret udenfor boksen --- */
+.back-btn.outside[b-rymb5hb2o2] {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background: linear-gradient(145deg, #a8e6cf, #96d6bf);
+    color: #1e1e1e;
+    border: none;
+    padding: 10px 26px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-btn.outside:hover[b-rymb5hb2o2] {
+    background: linear-gradient(145deg, #b9ebd7, #9ddcc6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn.outside i[b-rymb5hb2o2] {
+    font-size: 1.1rem;
+}
+
+/* --- Justér placering på mobil --- */
+@media (max-width: 600px) {
+    .back-btn.outside[b-rymb5hb2o2] {
+        left: 20px;
+        top: 10px;
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}

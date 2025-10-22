@@ -1,0 +1,83 @@
+﻿@page "/create-support"
+@using SupportCosmos.Shared.Models
+@using SupportCosmos.Client.Components
+@inject HttpClient Http
+@inject NavigationManager Nav
+
+<div class="page-wrapper">
+    <button class="back-btn outside" @onclick="GoBack">
+        <i class="bi bi-arrow-left"></i> Tilbage
+    </button>
+
+    <div class="support-wrapper">
+        <div class="support-card">
+            <h2 class="support-title">Opret Support Henvendelse</h2>
+
+            <EditForm Model="@message" OnValidSubmit="@HandleValidSubmit" class="support-form">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="floating-field">
+                    <InputText id="name" class="input" @bind-Value="message.Name" placeholder=" " />
+                    <label for="name">Navn</label>
+                </div>
+
+                <div class="floating-field">
+                    <InputText id="email" type="email" class="input" @bind-Value="message.Email" placeholder=" " />
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="floating-field">
+                    <InputText id="phone" class="input" @bind-Value="message.Phone" placeholder=" " />
+                    <label for="phone">Telefon</label>
+                </div>
+
+                <div class="floating-field">
+                    <InputSelect id="category" class="input" @bind-Value="message.Category">
+                        <option value="">-- Vælg kategori --</option>
+                        <option value="Teknisk Spørgsmål">Teknisk Spørgsmål</option>
+                        <option value="Reservedele">Reservedele</option>
+                        <option value="Katalog">Katalog</option>
+                        <option value="Forhandler">Forhandler</option>
+                        <option value="Feature-forslag">Feature-forslag</option>
+                        <option value="Andet">Andet</option>
+                    </InputSelect>
+                    <label for="category">Kategori</label>
+                </div>
+
+                <div class="floating-field">
+                    <InputTextArea id="description" class="input textarea" rows="4" @bind-Value="message.Description" placeholder=" " />
+                    <label for="description">Beskrivelse</label>
+                </div>
+
+                <button type="submit" class="send-btn">Send</button>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+<BekraeftelsesDialog @ref="ModalRef" Title="Tak for din henvendelse">
+    <div style="padding: 10px;">
+        <p>Din supportbesked er blevet sendt succesfuldt 💬</p>
+        <button class="button-luk" @onclick="CloseModal">Luk</button>
+    </div>
+</BekraeftelsesDialog>
+
+@code {
+    private SupportMessage message = new();
+    private BekraeftelsesDialog? ModalRef;
+
+    private async Task HandleValidSubmit()
+    {
+        var response = await Http.PostAsJsonAsync("api/support", message);
+        if (response.IsSuccessStatusCode)
+        {
+            message = new();
+            ModalRef?.Open();
+        }
+    }
+
+    private void CloseModal() => ModalRef?.Close();
+
+    private void GoBack() => Nav.NavigateTo("/");
+}

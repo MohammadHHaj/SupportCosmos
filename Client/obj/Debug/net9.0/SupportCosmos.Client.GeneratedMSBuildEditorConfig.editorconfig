@@ -1,0 +1,57 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = SupportCosmos.Client
+build_property.RootNamespace = SupportCosmos.Client
+build_property.ProjectDir = C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Client\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Mohammad Haj\RiderProjects\SupportCosmos\Client
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Mohammad Haj/RiderProjects/SupportCosmos/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mohammad Haj/RiderProjects/SupportCosmos/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mohammad Haj/RiderProjects/SupportCosmos/Client/Components/BekraeftelsesDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCZWtyYWVmdGVsc2VzRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-m9m5mf4dcs
+
+[C:/Users/Mohammad Haj/RiderProjects/SupportCosmos/Client/Pages/CreateSupport.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlU3VwcG9ydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-rymb5hb2o2
+
+[C:/Users/Mohammad Haj/RiderProjects/SupportCosmos/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4uwmffyuza
+
+[C:/Users/Mohammad Haj/RiderProjects/SupportCosmos/Client/Pages/SupportList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VwcG9ydExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-zpshthyff6
+
+[C:/Users/Mohammad Haj/RiderProjects/SupportCosmos/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-u7igte6eqv
+
+[C:/Users/Mohammad Haj/RiderProjects/SupportCosmos/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-nzm2y6dj9n

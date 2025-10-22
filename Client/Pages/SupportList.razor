@@ -1,0 +1,62 @@
+﻿@page "/support-list"
+@using SupportCosmos.Shared.Models
+@inject HttpClient Http
+@inject NavigationManager Nav
+
+<div class="page-wrapper">
+    <button class="back-btn outside" @onclick="GoBack">
+        <i class="bi bi-arrow-left"></i> Tilbage
+    </button>
+
+    <div class="support-list-wrapper">
+        <h3>Supporthenvendelser</h3>
+
+        @if (supportMessages == null)
+        {
+            <p><em>Indlæser henvendelser...</em></p>
+        }
+        else if (!supportMessages.Any())
+        {
+            <p>Ingen henvendelser fundet.</p>
+        }
+        else
+        {
+            <table class="support-table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Navn</th>
+                    <th>Email</th>
+                    <th>Kategori</th>
+                    <th>Beskrivelse</th>
+                    <th>Oprettet</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var msg in supportMessages)
+                {
+                    <tr>
+                        <td>@msg.Id</td>
+                        <td>@msg.Name</td>
+                        <td>@msg.Email</td>
+                        <td>@msg.Category</td>
+                        <td>@msg.Description</td>
+                        <td>@msg.CreatedUtc.ToLocalTime().ToString("g")</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+@code {
+    private List<SupportMessage>? supportMessages;
+
+    protected override async Task OnInitializedAsync()
+    {
+        supportMessages = await Http.GetFromJsonAsync<List<SupportMessage>>("api/support");
+    }
+
+    private void GoBack() => Nav.NavigateTo("/");
+}
