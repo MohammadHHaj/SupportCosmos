@@ -62,7 +62,7 @@ Partition key **/category** matcher CosmosService-implementeringen i projektet.
 For at køre projektet lokalt kan man klone GitHub-repositoriet med:
 
 
-git clone https://github.com/[DIT_GITHUB_NAVN]/SupportCosmos.git
+git clone https://github.com/MohammadHHaj/SupportCosmos.git
 
 
 Åbn løsningen i **Visual Studio** eller **JetBrains Rider**, sørg for at **SupportCosmos.Server** er sat som *startup-projekt* (det hoster både API’et og Blazor-klienten), og kør projektet.  
