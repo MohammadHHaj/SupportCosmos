@@ -25,10 +25,11 @@ jobs:
 
       # 👇 Her peger vi nu korrekt på din server.csproj
       - name: Build with dotnet
-        run: dotnet build ./SupportCosmos/Server/SupportCosmos.Server.csproj --configuration Release
+        run: dotnet build ./Server/SupportCosmos.Server.csproj --configuration Release
+
 
       - name: dotnet publish
-        run: dotnet publish ./SupportCosmos/Server/SupportCosmos.Server.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish ./Server/SupportCosmos.Server.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -67,6 +68,7 @@ jobs:
           package: .
 
           
+
 
 
 
