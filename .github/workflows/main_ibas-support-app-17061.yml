@@ -15,25 +15,35 @@ jobs:
     permissions:
       contents: read #This is required for actions/checkout
 
-    steps:
+     steps:
+      # Hent koden fra dit repository
       - uses: actions/checkout@v4
 
-      - name: Set up .NET Core
+      # Sæt .NET 9 op
+      - name: Set up .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '9.x'
 
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
+      # Gendan NuGet-pakker
+      - name: Restore dependencies
+        run: dotnet restore ./Server/Server.csproj
 
-      - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      # Byg server-projektet (hvor Blazor-klienten er inkluderet)
+      - name: Build Server project
+        run: dotnet build ./Server/Server.csproj --configuration Release --no-restore
 
+      # Publicér kun Server-delen til en publish-mappe
+      - name: Publish for Azure
+        run: dotnet publish ./Server/Server.csproj -c Release -o ./publish
+
+      # Upload artefaktet (det der bliver deployet til Azure)
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          path: ./publish
+
 
   deploy:
     runs-on: ubuntu-latest
@@ -62,4 +72,5 @@ jobs:
           app-name: 'ibas-support-app-17061'
           slot-name: 'Production'
           package: .
+
           
