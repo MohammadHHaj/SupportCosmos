@@ -15,34 +15,27 @@ jobs:
     permissions:
       contents: read #This is required for actions/checkout
 
-  steps:
-      # Hent koden fra dit repository
+    steps:
       - uses: actions/checkout@v4
 
-      # Sæt .NET 9 op
-      - name: Set up .NET
+      - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '9.x'
 
-      # Gendan NuGet-pakker
-      - name: Restore dependencies
-        run: dotnet restore ./Server/Server.csproj
+      # 🔧 Her fortæller vi den præcist hvilket projekt der skal bygges (Server-delen)
+      - name: Build with dotnet
+        run: dotnet build ./Server/Server.csproj --configuration Release
 
-      # Byg server-projektet (hvor Blazor-klienten er inkluderet)
-      - name: Build Server project
-        run: dotnet build ./Server/Server.csproj --configuration Release --no-restore
+      # 🔧 Og her publicerer vi kun Server-projektet
+      - name: dotnet publish
+        run: dotnet publish ./Server/Server.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
-      # Publicér kun Server-delen til en publish-mappe
-      - name: Publish for Azure
-        run: dotnet publish ./Server/Server.csproj -c Release -o ./publish
-
-      # Upload artefaktet (det der bliver deployet til Azure)
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ./publish
+          path: ${{env.DOTNET_ROOT}}/myapp
 
 
   deploy:
@@ -74,4 +67,5 @@ jobs:
           package: .
 
           
+
 
