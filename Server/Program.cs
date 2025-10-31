@@ -3,33 +3,35 @@ using SupportCosmos.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Tilføj controller + Razor pages
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-// ✅ Registrér CosmosClient
-builder.Services.AddSingleton(sp =>
-{
-    var config = builder.Configuration;
-    return new CosmosClient(
-        config["CosmosDb:Account"],
-        config["CosmosDb:Key"]
-    );
-});
+// ✅ Hent Cosmos-konfiguration (fra appsettings.json + miljøvariabler)
+var config = builder.Configuration.GetSection("CosmosDb");
+string account = config["Account"];
+string key = config["Key"];
+string databaseName = config["DatabaseName"];
+string containerName = config["ContainerName"];
 
-// ✅ Registrér CosmosService med databaseName og containerName
+// Debugging (valgfrit — kan hjælpe første gang du tester i Azure)
+Console.WriteLine($"Cosmos endpoint: {account}");
+Console.WriteLine($"Database: {databaseName}");
+Console.WriteLine($"Container: {containerName}");
+
+// ✅ Registrér CosmosClient som singleton
+builder.Services.AddSingleton(sp => new CosmosClient(account, key));
+
+// ✅ Registrér CosmosService (din egen klasse)
 builder.Services.AddSingleton(sp =>
 {
-    var config = builder.Configuration;
     var cosmosClient = sp.GetRequiredService<CosmosClient>();
-    return new CosmosService(
-        cosmosClient,
-        config["CosmosDb:DatabaseName"],
-        config["CosmosDb:ContainerName"]
-    );
+    return new CosmosService(cosmosClient, databaseName, containerName);
 });
 
 var app = builder.Build();
 
+// ✅ Produktion: brug HSTS og ExceptionHandler
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
